@@ -1,0 +1,17 @@
+{
+  "name": "Amertecs",
+  "short_name": "Amertecs",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#0A1F44",
+  "lang": "tr-TR",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.amertecs.com.tr/sitemap.xml
