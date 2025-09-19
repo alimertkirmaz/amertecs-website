@@ -1838,9 +1838,9 @@
             let scrollingUp = false;
 
             window.addEventListener('scroll', () => {
-                const y = window.scrollY;
-                scrollingUp = y < lastY;
-                lastY = y;
+                const currentY = window.scrollY;
+                scrollingUp = currentY < lastY;
+                lastY = currentY;
             }, { passive: true });
 
             const io = new IntersectionObserver((entries) => {
@@ -1850,11 +1850,8 @@
                         // When element enters viewport, reveal it
                         el.classList.add('in-view');
                     } else {
-                        // When element leaves viewport while scrolling up, hide it back to side
-                        if (scrollingUp) {
-                            el.classList.remove('in-view');
-                        }
-                        // When scrolling down and element leaves at bottom, keep state to avoid flicker
+                        // When element leaves viewport, remove the in-view class
+                        el.classList.remove('in-view');
                     }
                 });
             }, {
